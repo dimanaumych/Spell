@@ -1,63 +1,62 @@
-body{
-  width: 100%;
-  height: 2000px;
-  margin: 0;
-  font-family: Arial;
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.woff') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff')
 }
-a{
-    color: white;
+a {
     text-decoration: none;
+}
+.left_sidebar{
+    display: none;
 }
 .header-wrapper{
     width: 100%;
-    height: 650px;
-    background-image: url('../images/header/slide-4.jpg');
-    background-color: darkgray;
-    position: relative;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    transition: 1.5s;
-}
-.header-wrapper:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.7);
-    z-index: 2;
+    background-color: white;
+    color: black;
 }
 .header-menu-wrapper{
     width: 100%;
     position: relative;
 }
-.header-menu-wrapper:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,.25);
-    z-index: 2;
-}
+
 header{
-    width: 1200px;
+    max-width: 1680px;
     height: 100px;
     display: flex;
     align-items: center;
-    margin: 0 auto;
-    color: white;
+    margin-left: 120px;
+    color: black;
     justify-content: space-between;
     font-size: .9rem;
     position: relative;
     z-index: 9;
-    font-family: Arial;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+header ul{
+    margin-left: 10px;
+}
+header ul a{
+    height: 30px;
+    line-height: 30px;
+    color: black;
+}
+header ul a:hover{
+    background: linear-gradient(0deg, #E94E1B 50%, white 50%);
+}
+.call-back-button-header{
+    width: 200px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: linear-gradient(90deg, #E94E1B 50%, white 50%);
+    font-weight: bold;
+    cursor: pointer;
+}
+.header-menu {
+    display: flex;
 }
 .header-menu ul{
     display: flex;
@@ -66,18 +65,16 @@ header{
     margin-left: 17px;
     margin-right: 17px;
     font-size: 1rem;
-    font-family: Arial;
     letter-spacing: 1px;
     cursor: pointer;
 }
 .header-menu li:hover{
-    color:#0093D0;
+    color: black;
 }
 header select{
     background: none;
     border: none;
-    color: white;
-    font-family: Arial;
+    color: black;
     font-size: 1rem;
     cursor: pointer;
     letter-spacing: 1px;
@@ -86,544 +83,298 @@ header option{
     background: none;
     color: black;
 }
+.header-phone-number{
+    margin-left: 80px;
+}
 .laguage-select{
     padding-right: 10px;
 }
 .phone-select{
     padding-right: 10px;
 }
-.banner-info-wrapper{
+
+.header-banner{
     display: flex;
     width: 1200px;
-    align-items: center;
     margin: 0 auto;
-    position: relative;
-    z-index: 10;
-}
-.social-nav{
-    display: flex;
-    flex-direction: column;
-    margin-top: 50px;
-}
-.social-nav a{
-    margin-top: 40px;
-    margin-bottom: 40px;
-    text-align: center;
-    transform: rotate(270deg);
-    webkit-transform: rotate(270deg);
-    cursor: pointer;
-}
-.social-nav a:hover{
-    color:#0093D0;
-}
-.banner-info-main-text{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-}
-.banner-info-title{
-    color: white;
-    font-size: 5rem;
-    font-weight: normal;
-    font-family: Arial;
-    text-transform: uppercase;
-
-}
-.banner-button-reservation{
-    font-family: Arial;
-    font-size: 1rem;
-    color: white;
-    width: 170px;
-    height: 60px;
-    cursor: pointer;
-    background-color: #0093D0;
-    text-align: center;
-    text-transform: uppercase;
-    line-height: 60px;
-    margin-top: 20px;
-}
-.tourist-services-wrapper{
-    width: 100%;
-    position: relative;
-}
-.tourist-services{
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-
-}
-.tourist-services-title{
-    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 200px;
+    margin-top: 100px;
+    font-family: Montserrat;
 }
-.tourist-services-title-text{
-    font-family: Arial;
-    font-size: 3rem;
-    font-weight: normal;
-    text-transform: uppercase;
-}
-.slider-wrapper{
-    width: 100%;
-    margin-top: 20px;
-    /*display: flex;*/
-}
-.slider-wrapper-slide{
-    width: 100%;
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /*grid-template-rows: repeat(3, 1fr);*/
-    grid-column-gap: 15px;
-    grid-row-gap: 10px;
-}
-.slider-wrapper div{
-    position: relative;
-    z-index: 4;
-}
-.slick-slide div{
-    position: relative;
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align: center;
-
- }
-.tourist-services .slick-slide img{
-    width: 100%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.tourist-services .slick-slide p{
-    position: absolute;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    text-align: center;
-    bottom: 25px;
-    font-size: 1.2rem;
-    color: white;
-    z-index: 10;
-
-}
-.tourist-services-dark-bg{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: 1;
-}
-.tourist-services .slick-list{
-    margin: 20px 20px 30px;
-}
-.tourist-services-slider-buttons{
+.header-banner-left-side{
+    width: 40%;
     display: flex;
-}
-.tourist-services-slider-buttons img{
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.tourist-services-slider-buttons img:hover{
-    opacity: .4;
-}
-.tourist-services-slider-right-button{
-    transform: rotate(180deg);
-}
-
-.bottom-image-slider{
-    margin-top: 40px;
-}
-.left-map{
-    width: 100px;
-    position: absolute;
-    left: 0;
-    top: 280px;
-}
-.left-plane{
-    width: 380px;
-    position: absolute;
-    left: 0;
-    top: 805px;
-    z-index: 1;
-}
-.right-plane{
-    width: 150px;
-    position: absolute;
-    right: 0;
-    top: 55px;
-    z-index: 1;
-}
-.advantages-wrapper{
-    width: 100%;
-    height: 640px;
-    background-color: #0093D0;
-    margin-top: 250px;
-    margin-bottom: 150px;
-    display: flex;
-    align-items: center;
-}
-.advantages{
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-.advantages-list-wrapper{
-    display: flex;
-    width: 45%;
     flex-direction: column;
-    color: white;
-    font-family: Arial;
-
 }
-.advantages-title{
-    padding-left: 40px;
-    font-size: 2.7rem;
+.header-banner-first-title{
+    font-size: 3rem;
     text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 2px;
 }
-.advantages-list{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 20px;
-    grid-column-gap: 20px;
-}
-.advantages-item{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.advantages-item img{
-    width: 90px;
-    height: 90px;
-}
-.advantages-image{
-    width: 45%;
-}
-.advantages-image img{
-    width: 100%;
-    height: 730px;
-}
-.about-company-wrapper{
-    width: 100%;
-    position: relative;
-}
-.about-company{
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    /*position: relative;*/
-}
-.about-company-info{
-    display: flex;
-    flex-direction: column;
-    width: 40%;
-}
-.about-company-title{
-    font-size: 2.4rem;
+.header-banner-second-title{
+    color: white;
+    font-size: 3rem;
+    width: 685px;
     text-transform: uppercase;
-    margin-bottom: 30px;
-
-}
-.about-company-text{
-
-}
-.about-company-images{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    top: 50px;
-}
-.about-company-images img{
-    width: 285px;
-    height: 330px;
-}
-.about-company-images div{
-    width: 285px;
-    height: 700px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 7px;
-    margin-right: 7px;
-}
-
-.about-company-images div:nth-child(2){
-    margin-top: 100px;
-}
-.about-company-images div:nth-child(3){
-    margin-bottom: 200px;
-}
-.about-company-images div:nth-child(4){
-    margin-bottom: 200px;
-}
-.about-company-top-plane{
-    width: 500px;
-    height: 500px;
-    position: absolute;
-    top: -320px;
-    left: 400px;
-    z-index: 100;
-}
-.about-company-left-plane{
-    width: 350px;
-    height: 500px;
-    position: absolute;
-    top: 50px;
-    left: 0px;
-}
-.about-company-center-plane{
-    width: 600px;
-    height: 600px;
-    position: absolute;
-    top: 650px;
-    left: 290px;
-    /*z-index: 100;*/
-}
-.about-company-right-plane{
-    width: 400px;
-    height: 550px;
-    position: absolute;
-    top: 450px;
-    right: 0;
-}
-.our-team-wrapper{
-    width: 100%;
-    margin-top: 900px;
-    margin-bottom: 100px;
-}
-.our-team{
-    width: 1200px;
-    margin: 0 auto;
-}
-.our-team-title{
-    font-size: 2.2rem;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
-.our-team-slider{
-    display: flex;
-    justify-content: flex-end;
-}
-.our-team-slide{
-    display: flex;
-}
-.our-team-slider img{
-    width: 45%;
-}
-.our-team-slider-info{
-    width: 55%;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-.tourist-services-slider-buttons img{
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.tourist-services-slider-buttons img:hover{
-    opacity: .4;
-}
-
-.our-team-slider .slick-slide{
-    display: flex;
-}
-.our-team-slider-right-button{
-    transform: rotate(180deg);
-}
-.our-team-member-name{
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    color: #0093D0;
+    -webkit-text-stroke: 1px #000000;
+    letter-spacing: 2px;
     margin-bottom: 20px;
 }
-.our-team-slider-position{
-    font-size: .9rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.header-banner-text{
+    margin-bottom: 50px;
 }
-.our-team-slider-text{
-    width: 90%;
-    font-size: 1.2rem;
+.header-banner-right-side{
+    width: 55%;
+    height: 100%;
 }
-.our-team-slider-buttons{
-    display: flex;
-    margin-top: 25px;
-    justify-content: flex-start;
-}
-.our-team-slider-buttons img{
-    width: 30px;
-    height: 30px;
-    margin-left: 10px;
-    margin-right: 10px;
+.call-back-button-header-banner{
+    width: 150px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    background: linear-gradient(90deg, #E94E1B 50%, white 30%);
+    font-weight: bold;
     cursor: pointer;
 }
-.our-team-slider-buttons img:hover{
-    opacity: .4;
-}
-.our-team-slider-buttons{
+
+.service{
+    width: 100%;
+    padding-top: 130px;
+    padding-bottom: 200px;
+    display: flex;
+    justify-content: center;
 }
 
+.service-container{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.service_card{
+    position: relative;
+    padding: 50px;
+    display: flex;
+    background: white;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    -webkit-box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 0px 38px 0px rgba(0,0,0,0.16);
+    cursor: pointer;
+    margin-right: 56px;
+    margin-bottom: 150px;
+}
+
+
+
+.service_button{
+    width: 164px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat Medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.service_describe-card{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 27px;
+    background: linear-gradient(0deg, #E94E1B 30%, white 30%);
+}
+
+.service_text{
+    width: 420px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.service_button__dark{
+    display: none;
+    transition: 0.3s;
+}
+
+.service_card:hover .service_describe-card{
+    background: linear-gradient(0deg, #000000 30%, #ee754d 30%);
+    color: white;
+    transition: 0.3s;
+}
+
+.service_card:hover .service_text{
+    color: white;
+    transition: 0.3s;
+}
+
+.service_card:hover .service_button__dark{
+    display: block;
+    transition: 0.3s;
+}
+
+.service_card:hover .service_button__orange{
+    display: none;
+    transition: 0.3s;
+}
+
+.service_card:hover{
+    background-color: #ee754d;
+    transition: 0.3s;
+}
+
+
+.service_card::before{
+    content: "";
+    position: absolute;
+    right: -66px;
+    z-index: -1;
+    bottom: -66px;
+    border: 65px solid transparent;
+    border-left: 275px solid #E94E1B;
+    transition: 0.3s;
+}
+
+.service_card:hover:before{
+    border-left: 275px solid black;
+    transition: 0.3s;
+}
+
+.service_card:nth-child(2n){
+    margin-top: 60px;
+}
+
+.steps{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 133px;
+}
+
+.steps_card{
+    display: flex;
+    width: 515px;
+    margin-bottom: 94px;
+}
+
+
+.steps_card:nth-child(2n){
+    margin-left: 160px;
+}
+
+.steps_wrapper{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.number-inc{
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    width: 46px;
+    height: 46px;
+    background: black;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF
+}
+
+.steps_card__inc{
+    position: relative;
+    margin-right: 26px;
+}
+
+.inc-icon{
+    position: absolute;
+    left: 30px;
+    top: 33px;
+}
+
+.steps_card__title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: #242424;
+    margin-bottom: 23px;
+}
+
+
+.steps_card__text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #242424;
+}
+
+.steps_card__button{
+    display: flex;
+    justify-content: center;
+    width: 346px;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #242424;
+    background: linear-gradient(90deg, #E94E1B 50%, white 30%);
+    padding: 12px 0px;
+}
 
 @media (max-width: 1440px) {
-    header{
-        width: 1020px;
+    header {
+        width: 1000px;
+        height: 100px;
     }
-    .banner-info-wrapper{
-        width: 1020px;
-    }
-    .tourist-services{
-        width: 1020px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .advantages{
-        width: 1020px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-    }
-    .about-company{
-        width: 1020px;
-    }
-    .our-team{
-        width: 1020px;
-    }
-}
-@media(max-width: 1410px){
-    .about-company-images{
-        top: 130px;
-    }
-    .about-company-images img{
-        width: 225px;
-        height: 290px;
-    }
-    .about-company-images div{
-        width: 225px;
-        height: 620px;
-        margin-left: 7px;
-        margin-right: 7px;
-    }
-
 }
 @media (max-width: 1024px) {
-    header{
+    header {
         width: 760px;
-    }
-    .logo{
-        width: 200px;
-    }
-    .header-menu li{
-        margin-left: 7px;
-        margin-right: 7px;
-    }
-    .laguage-select{
-        display: none;
-    }
-    .banner-info-wrapper{
-        width: 760px;
-    }
-    .tourist-services{
-        width: 760px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .left-plane {
-        width: 280px;
-        position: absolute;
-        left: 0;
-        top: 610px;
-        z-index: -1;
-    }
-    .advantages-wrapper{
-        height: 500px;
-    }
-    .advantages-image img{
-        height: 590px;
-    }
-    .advantages{
-        width: 760px;
-    }
-    .advantages-title{
-        padding-left: 0px;
-    }
-    .about-company{
-        width: 760px;
-    }
-    .our-team{
-        width: 760px;
-    }
-    .about-company-left-plane{
-        width: 250px;
-        height: 400px;
-        position: absolute;
-        top: 150px;
-        left: 0px;
-    }
-    .about-company-right-plane {
-        width: 320px;
-        height: 480px;
-        position: absolute;
-        top: 400px;
-        right: 0;
-    }
-    .about-company-center-plane {
-        width: 500px;
-        height: 500px;
-        position: absolute;
-        top: 580px;
-        left: 150px;
-        /* z-index: 100; */
-    }
-    .about-company-top-plane {
-        width: 450px;
-        height: 450px;
-        top: -300px;
-        left: 200px;
-    }
-    .about-company-images{
-        top: 130px;
-    }
-    .about-company-images img{
-        width: 165px;
-        height: 230px;
-    }
-    .about-company-images div{
-        width: 165px;
-        height: 500px;
-        margin-left: 7px;
-        margin-right: 7px;
+        height: 100px;
     }
 
-    .about-company-images div:nth-child(2){
-        margin-top: 100px;
+    .logo {
+        width: 170px;
     }
-    .about-company-images div:nth-child(3){
-        margin-bottom: 200px;
+
+    .laguage-select {
+        display: none;
     }
-    .about-company-images div:nth-child(4){
-        margin-bottom: 200px;
+
+    .header-menu li {
+        margin-left: 7px;
+        margin-right: 7px;
+        font-size: .95rem;
+        letter-spacing: 1px;
+        cursor: pointer;
     }
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
     .header-menu{
         display: none;
     }
@@ -642,242 +393,203 @@ header option{
     header{
         width: 420px;
     }
-    .logo{
-        width: 200px;
-    }
-    .laguage-select{
-        display: none;
-    }
-    .banner-info-wrapper{
-        width: 420px;
-    }
-    .tourist-services{
-        width: 420px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-    }
-    .left-plane {
-        width: 280px;
-        position: absolute;
-        left: 0;
-        top: 910px;
 
-    }
-    .advantages-wrapper{
-        height: 500px;
-    }
-    .advantages-image img{
-        height: 590px;
-    }
-    .advantages{
-        width: 420px;
-    }
-    .advantages-title{
-        padding-left: 0px;
-    }
-    .about-company{
-        width: 420px;
-    }
-    .our-team{
-        width: 420px;
-    }
-    .about-company-images{
-        top: 250px;
-    }
-    .about-company-info{
-        width: 100%;
-    }
-    .about-company-images img{
-        width: 90px;
-        height: 140px;
-    }
-    .about-company-images div{
-        width: 90px;
-        height: 300px;
-        margin-left: 7px;
-        margin-right: 7px;
-    }
-    .about-company-images div:nth-child(2) {
-        margin-top: 20px;
-    }
-    .about-company-images div:nth-child(3) {
-        margin-bottom: 100px;
-    }
-    .about-company-images div:nth-child(4) {
-        margin-bottom: 100px;
-    }
-    .about-company-left-plane {
-            width: 170px;
-            height: 280px;
-            top: 200px;
-    }
-    .about-company-right-plane {
-        width: 220px;
-        height: 340px;
-        top: 400px;
-        right: 0;
-    }
-    .about-company-center-plane {
-        width: 300px;
-        height: 300px;
-        top: 580px;
-        left: 100px;
-    }
-    .about-company-top-plane {
+    .header-menu{
         display: none;
     }
-    .advantages-wrapper{
-        margin-bottom: 70px;
-    }
-    .advantages-list-wrapper{
-        width: 100%;
-    }
-    .advantages-image{
-        display: none;
-    }
-    .our-team-wrapper{
-        margin-top: 700px;
-    }
-    .our-team-slider{
-        flex-wrap: wrap;
-    }
-    .our-team-slider .slick-slide{
-        display: block;
-    }
-    .our-team-slider img{
-        width: 100%;
-    }
-    .our-team-slider-info{
-        width: 100%;
-        margin-top: 30px;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    .our-team-slider-text{
-        width: 100%;
-    }
-    .our-team-slider-buttons{
-        width: 20%;
-        margin-top: 25px;
-    }
-}
-@media (max-width: 426px) {
-    .about-company-center-plane {
-        display: none;
-    }
-    .about-company-right-plane {
-        top: 520px;
-    }
-    .about-company-left-plane {
-        top: 150px;
-    }
-    .left-map{
-        display: none;
+    .logo{
+        margin-left: 10%;
     }
     header{
+        /*position: absolute;*/
         width: 100%;
+        display: flex;
+        justify-content: normal;
+        z-index: 99;
+
     }
-    .logo{
-        width: 200px;
+    .header-contact{
+        margin: 0px auto;
+
     }
-    .header-menu li{
-        margin-left: 7px;
-        margin-right: 7px;
-    }
-    .laguage-select{
+    .header-language{
         display: none;
     }
-    .banner-info-wrapper{
-        width: 100%;
-    }
-    .tourist-services{
-        width: 95%;
-        margin: 0 auto;
+    .header-language-mobile{
         display: flex;
-        flex-direction: column;
+        margin: 0.35em 0.1em;
+        padding: 0.5em 1.2em;
+        outline: none;
+        align-items: center;
     }
-    .advantages-title {
-        font-size: 2.3rem;
-        text-align: center;
-        margin-bottom: 10px;
+    .header-language-mobile img{
+        width: 14px;
+        height: 9px;
+        margin-left: 10px;
     }
-    .tourist-services-title-text{
-        font-size: 2rem;
-    }
-    .left-plane {
-        width: 280px;
-        position: absolute;
-        left: 0;
-        top: 810px;
-        z-index: -1;
-    }
-    .advantages-wrapper{
-        height: 450px;
-    }
-    .advantages{
+    .mobile-menu-header{
         width: 100%;
-    }
-    .advantages-title{
-        padding-left: 0px;
-    }
-    .about-company{
-        width: 90%;
-    }
-    .our-team{
-        width: 90%;
-    }
-    .about-company-images{
-        top: 270px;
-    }
-    .about-company-images img{
-        width: 75px;
-        height: 110px;
-    }
-    .about-company-images div{
-        width: 75px;
-        height: 240px;
-        margin-left: 7px;
-        margin-right: 7px;
-    }
-    .about-company-left-plane {
-        width: 150px;
-        height: 260px;
-        top: 190px;
-    }
-    .about-company-right-plane {
-        top: 450px;
-    }
-    .our-team-wrapper{
-        margin-top: 500px
-    }
-    .our-team-slider-buttons {
-        margin-left: 40px;
-    }
-}
-@media (max-width: 380px) {
-    .about-company-images img{
-        width: 70px;
+        background-color: #0093D0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 100px;
     }
-    .about-company-images div{
-        width: 70px;
-        height: 220px;
-        margin-left: 7px;
-        margin-right: 7px;
+    .mobile-menu-social{
+        width: 40%;
+        display: flex;
+        margin-bottom: 40px;
+    }
+    .mobile-menu-social img{
+        width: 30px;
+        height: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .mobile-menu-phone-wrapper{
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-top: .7px solid lightgray;
+        border-bottom: .7px solid lightgray;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .mobile-menu-phone-wrapper p{
+        color: black;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .mobile-menu-language-select{
+        width: 65px;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+    }
+    /* BURGER MENU */
+    .left_sidebar{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: white;
+        color: black;
+        height: 100%;
+        left: 0;top: 0;
+        z-index: 99;
+        align-items: center;
+        transition: 0.5s;
+        transform: translateX(100%);
+        /*overflow-x: hidden;*/
+        /*overflow-y: auto;*/
+    }
+    .left_sidebar a{
+        color: black;
+    }
+    .mobile-menu-header-logo{
+        width: 200px;
+    }
+    /* Demo Buttons Style */
+    .codrops-demos {
+        padding-top: 1em;
+        font-size: 20px;
+    }
+    .codrops-demos a {
+        display: inline-block;
+        margin: 0.35em 0.1em;
+        padding: 0.5em 1.2em;
+        outline: none;
+        text-decoration: none;
+        /*text-transform: uppercase;*/
+        letter-spacing: 1px;
+        font-weight: 800;
+        border-radius: 10px;
+        font-size: 20px;
+        border: 2px solid transparent;
+    }
+
+    .codrops-demos_sidebar a {
+        /*display: inline-block;*/
+        margin: 0.35em 0.1em;
+        padding: 0.5em 1.2em;
+        outline: none;
+        text-decoration: none;
+        /*text-transform: uppercase;*/
+        letter-spacing: 1px;
+        font-weight: 800;
+        border-radius: 10px;
+        border: 2px solid transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        color: black;
+    }
+    .codrops-demos_sidebar{
+        font-family: 'Montserrat';
+        /*position: absolute;*/
+        top: 20%;
+        bottom: 20%;
+        padding-top: 1em;
+        font-size: 1.2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+    }
+    .menu_button{
+        display: flex;
+        width: 50px;
+        height: auto;
+        position: absolute;
+        left: -80px;
+        top: 22px;
+        z-index: 1000;
+    }
+    .cancel_button{
+        width: 30px;
+        height: auto;
+        position: absolute;
+        left: 25px;
+        top: 25px;
+    }
+    .menu_active {
+        transform: translateX(0%);
+    }
+    .content_active {
+        transform: translateX(-100%);
+    }
+    .codrops-demos_sidebar a:hover,
+    .codrops-demos_sidebar a.current-demo {
+        color: black;
+        border-color: black;
     }
 }
 
-@media (max-width: 350px) {
-    .about-company-images img{
-        width: 60px;
-        height: 95px;
+
+@media (max-width: 525px) {
+    .back-call{
+        display: none;
     }
-    .about-company-images div{
-        width: 60px;
-        height: 200px;
-        margin-left: 7px;
-        margin-right: 7px;
+    .logo{
+        margin-left: 10%;
+    }
+}
+@media (max-width: 425px) {
+    header {
+        width: 100%;
+    }
+    .menu_button{
+        width: 40px;
+        top: 26px
+    }
+}
+@media (max-width: 360px) {
+    .mobile-menu-header-logo{
+        width: 150px;
     }
 }
