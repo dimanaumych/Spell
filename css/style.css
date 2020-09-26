@@ -4,6 +4,33 @@
     font-weight: 400;
     src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.woff') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff')
 }
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Montserrat-Bold'), local('Montserrat-Bold'), url('../fonts/Montserrat-Bold.woff') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff')
+}
+@font-face {
+    font-family: 'Montserrat Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat-Medium'), local('Montserrat-Medium.woff'), url('../fonts/Montserrat-Medium.woff') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff')
+}
+@font-face {
+    font-family: 'Montserrat SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat-SemiBold'), local('Montserrat-SemiBold.woff'), url('../fonts/Montserrat-SemiBold.woff') format('woff2'), url('../fonts/Montserrat-SemiBold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Montserrat-ExtraBold'), local('Montserrat-ExtraBold.woff'), url('../fonts/Montserrat-ExtraBold.woff') format('woff2'), url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+}
+
 a {
     text-decoration: none;
 }
@@ -32,7 +59,6 @@ header{
     position: relative;
     z-index: 9;
     font-family: Montserrat;
-    font-weight: bold;
 }
 
 header ul{
@@ -99,7 +125,7 @@ header option{
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 190px;
     font-family: Montserrat;
 }
 .header-banner-left-side{
@@ -137,6 +163,13 @@ header option{
     background: linear-gradient(90deg, #E94E1B 50%, white 30%);
     font-weight: bold;
     cursor: pointer;
+}
+
+.lights{
+    width: 40%;
+    display: flex;
+    height: 1140px;
+    align-items: flex-start;
 }
 
 .service{
@@ -351,7 +384,358 @@ footer{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background: #E94E1B;
 }
+
+.feedback_info{
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0px auto;
+}
+
+.feedback_info__wrapper{
+    margin-top: 100px;
+    width: 60%;
+}
+
+.info_feedback{
+    font-family: Montserrat;
+    font-style: normal;
+    font-size: 2em;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #FFFFFF;
+    color: #E94E1B;
+}
+
+.title_feedback{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.text_feedback{
+    font-family: Montserrat Medium;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    width: 330px;
+    margin-bottom: 71px;
+}
+
+.input-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.input-wrapper input{
+    width: 327px;
+    border: 0px;
+    border-bottom: 2px solid #FFFFFF;
+    background: #E94E1B;
+    padding-bottom: 10px;
+    font-family: Montserrat SemiBold;
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.69);
+}
+
+.input-wrapper .steps_card__button{
+    background: linear-gradient(90deg, white 50%, #E94E1B 30%);
+    margin-bottom: 96px;
+    cursor: pointer;
+}
+
+.input-wrapper input:nth-child(3n){
+    width: 100%;
+    margin-top: 87px;
+    margin-bottom: 60px;
+}
+
+.lights_feedback{
+    position: relative;
+     width: 40%;
+}
+
+.lights_feedback img{
+    position: absolute;
+    top: 0px;
+}
+
+.lights_feedback img:nth-child(1){
+    position: absolute;
+    top: 0px;
+    left: 20%;
+}
+
+
+.lights_feedback img:nth-child(2){
+    position: absolute;
+    top: 0px;
+    left: 50%;
+}
+
+.lights_feedback img:nth-child(3){
+    position: absolute;
+    top: 0px;
+    left: 80%;
+}
+
+.steps_card:nth-child(2n+1) .inc-point{
+    transform: rotate(45deg);
+}
+
+.steps_card:nth-child(2n) .inc-point{
+    transform: rotate(10deg);
+}
+
+.footer-info{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background: #FFFFFF;
+}
+
+.footer-info_wrapper{
+    width: 1200px;
+    display: flex;
+}
+
+.info_footer{
+    padding-top: 95px;
+    font-family: Montserrat ExtraBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    -webkit-text-stroke: 1px #E94E1B;
+    color: white;
+}
+
+.title_footer{
+    font-family: Montserrat ExtraBold;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    color: #E94E1B;
+    margin-bottom: 78px;
+}
+
+.text-bold_footer{
+    font-family: Montserrat SemiBold;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    color: #000000;
+    margin-bottom: 28px;
+}
+
+.text_footer{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #000000;
+}
+
+.footer_info__wrapper{
+    width: 20%;
+}
+
+.footer-pagination{
+    width: 80%;
+    display: flex;
+}
+
+.text_footer:nth-child(2n){
+    padding-bottom: 24px;
+}
+
+.text_footer:nth-child(2n+1){
+    padding-bottom: 90px;
+}
+
+.footer-pagination ul{
+    margin-top: 254px;
+}
+
+.footer-pagination__li{
+    margin-left: 213px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #242424;
+    margin-bottom: 10px;
+}
+
+.footer-pagination__social{
+    margin-left: 157px;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #242424;
+}
+
+.footer-pagination__li li{
+    margin-bottom: 10px;
+}
+
+.footer-pagination__social li{
+    margin-bottom: 10px;
+}
+
+.lights-one{
+    position: relative;
+    padding-top: 870px;
+    animation-name: lights-one;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+
+.lights-two{
+    position: relative;
+    padding-top: 580px;
+    animation-duration: 4s;
+    animation-name: lights-two;
+    animation-timing-function: ease-in-out;
+}
+
+.lights-three{
+    position: relative;
+    padding-top: 730px;
+    animation-duration: 5s;
+    animation-name: lights-three;
+    animation-timing-function: ease-in-out;
+}
+
+.lights-one:before{
+    content: '';
+    width: 6px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    bottom: 294px;
+    transform: translateX(-50%);
+}
+
+.lights-two:before{
+    content: '';
+    width: 4px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    bottom: 177px;
+    transform: translateX(-50%);
+}
+
+.lights-three:before{
+    content: '';
+    width: 6px;
+    background: black;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    bottom: 294px;
+    transform: translateX(-50%);
+}
+
+@keyframes lights-one{
+    0% {
+        padding-top: 0px;
+    }
+    25%{
+        padding-top: 870px;
+    }
+    50%{
+        padding-top: 0px;
+    }
+    100%{
+        padding-top: 870px;
+    }
+}
+
+@keyframes lights-two{
+    0% {
+        padding-top: 0px;
+    }
+    25%{
+        padding-top: 580px;
+    }
+    50%{
+        padding-top: 0px;
+    }
+    100%{
+        padding-top: 580px;
+    }
+}
+
+@keyframes lights-three{
+    0% {
+        padding-top: 0px;
+    }
+    25%{
+        padding-top: 730px;
+    }
+    50%{
+        padding-top: 0px;
+    }
+    100%{
+        padding-top: 730px;
+    }
+}
+
+
+.lights-one-on{
+    display: none;
+}
+
+.lights-two-on{
+    display: none;
+}
+
+.lights-three-on{
+    display: none;
+}
+
+
+
+.lights-one__animation:hover .lights-one-on{
+    display:block;
+}
+
+.lights-one__animation:hover .lights-one-off{
+    display:none;
+}
+
+
+.lights-two__animation:hover .lights-two-on{
+    display:block;
+}
+
+.lights-two__animation:hover .lights-two-off{
+    display:none;
+}
+
+.lights-three__animation:hover .lights-three-on{
+    display:block;
+}
+
+.lights-three__animation:hover .lights-three-off{
+    display:none;
+}
+
+input:-ms-input-placeholder {color: rgba(255, 255, 255, 0.69);}
+input::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.69);}
+input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
 
 @media (max-width: 1440px) {
     header {
