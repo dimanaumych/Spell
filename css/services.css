@@ -243,6 +243,7 @@ marquee{
 .additional-info-title{
     font-family: Montserrat;
     font-weight: bold;
+    width: 80%;
 }
 .additional-info-button{
     width: 40px;
@@ -288,6 +289,7 @@ marquee{
 .about-service{
     margin-top: 50px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     font-family: Montserrat;
     line-height: 25px;
@@ -406,4 +408,179 @@ marquee{
     color: #242424;
     background: linear-gradient(90deg, #E94E1B 50%, white 30%);
     padding: 12px 0px;
+}
+@media (max-width: 1440px) {
+    .header-banner{
+        width: 1000px;
+    }
+
+    .advantages-wrapper {
+        width: 1000px;
+        margin-top: 100px;
+    }
+    .additional-info-wrapper {
+        width: 1000px;
+    }
+    .about-service-wrapper {
+        width: 1000px;
+    }
+    .steps_wrapper {
+        max-width: 1000px;
+    }
+}
+@media (max-width: 1024px) {
+    .header-banner{
+        width: 760px;
+    }
+
+    .advantages-wrapper {
+        width: 760px;
+        margin-top: 100px;
+    }
+    .left-side-advantages{
+        width: 100%;
+    }
+    .right-side-advantages{
+        width: 100%;
+        margin-left: 0;
+    }
+    .advantages-arrow-white-left{
+        left: 50px;
+    }
+    .advantages-arrow-orange-left{
+        left: 95px;
+    }
+    .right-side-advantages .advantages-arrow-orange-left {
+        transform: rotate(180deg);
+        top: 0px;
+        left: 45px;
+    }
+    .additional-info-wrapper {
+        width: 760px;
+    }
+    .about-service-wrapper {
+        width: 760px;
+    }
+    .steps_wrapper {
+        max-width: 760px;
+    }
+}
+@media (max-width: 768px) {
+    .header-banner{
+        width: 425px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .header-banner-left-side{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .header-banner-right-side{
+        width: 100%;
+    }
+    .advantages-wrapper {
+        width: 425px;
+        margin-top: 100px;
+    }
+    .left-side-advantages, .right-side-advantages{
+        flex-wrap: wrap;
+    }
+    .right-side-advantages .orange-bg-wrapper{
+        position: relative;
+        width: 40%;
+    }
+    .left-side-advantages .orange-text-wrapper{
+        width: 80%;
+        margin-left: 20%;
+    }
+    .left-side-advantages .advantages-arrow-white-left{
+        width: 50px;
+        height: 40px;
+        left: 0;
+    }
+    .left-side-advantages .advantages-arrow-orange-left{
+        width: 50px;
+        height: 40px;
+        left: 20px;
+    }
+    .right-side-advantages .orange-text-wrapper{
+        width: 80%;
+        margin-right: 20%;
+        margin-top: 50px;
+    }
+    .right-side-advantages .advantages-arrow-white-left{
+        width: 50px;
+        height: 40px;
+        right: 0;
+        left: 425px;
+        top: 50px;
+    }
+    .right-side-advantages .advantages-arrow-orange-left{
+        width: 50px;
+        height: 40px;
+        right: 0;
+        left: 400px;
+        top: 40px;
+    }
+    .advantages-arrow-wrapper{
+        width: 100%;
+        position: relative;
+    }
+    .orange-text-wrapper{
+        width: 100%;
+    }
+    .additional-info-wrapper {
+        width: 425px;
+    }
+    .about-service-wrapper {
+        width: 425px;
+    }
+    .about-service-left{
+        width: 100%;
+    }
+    .about-service-right{
+        width: 100%;
+        margin-top: 50px;
+    }
+    .steps_wrapper {
+        max-width: 425px;
+    }
+}
+@media (max-width: 500px) {
+    .header-banner{
+        width: 370px;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .header-banner-first-title{
+        font-size: 2.4rem;
+    }
+    .advantages-wrapper {
+        width: 370px;
+        margin-top: 100px;
+    }
+    .right-side-advantages .advantages-arrow-white-left{
+        width: 50px;
+        height: 40px;
+        right: 0;
+        left: 300px;
+        top: 50px;
+    }
+    .right-side-advantages .advantages-arrow-orange-left{
+        width: 50px;
+        height: 40px;
+        right: 0;
+        left: 280px;
+        top: 40px;
+    }
+    .right-side-advantages .orange-bg-wrapper{
+        position: relative;
+        width: 80%;
+    }
+    .additional-info-wrapper {
+        width: 370px;
+    }
+    .about-service-wrapper {
+        width: 370px;
+    }
 }

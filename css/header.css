@@ -98,11 +98,17 @@ header option{
         width: 1000px;
         height: 100px;
     }
+    .header-phone-number{
+        margin-left: 10px;
+    }
 }
 @media (max-width: 1024px) {
     header {
         width: 760px;
         height: 100px;
+    }
+    .header-phone-number{
+        display: none;
     }
 
     .logo {
@@ -122,100 +128,27 @@ header option{
     }
 }
 @media (max-width: 769px) {
-    .header-menu{
-        display: none;
-    }
-    .phone-select{
-        display: none;
-    }
-    .social-nav{
-        display: none;
-    }
-    .banner-info-main-text{
-        margin-top: 200px;
-    }
-    .banner-info-title{
-        font-size: 4rem;
-    }
     header{
-        width: 420px;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: flex-start;
     }
-
-    .header-menu{
+    .call-back-button-header{
+        width: 150px;
+        margin-left: 70px;
+        font-size: .85rem;
+    }
+    .header-phone-number {
+        display: unset;
+    }
+    .header-menu {
         display: none;
     }
-    .logo{
-        margin-left: 10%;
+    .logo {
+        width: 140px;
     }
-    header{
-        /*position: absolute;*/
-        width: 100%;
-        display: flex;
-        justify-content: normal;
-        z-index: 99;
-        
-    }
-    .header-contact{
-        margin: 0px auto;
-
-    }
-    .header-language{
-        display: none;
-    }
-    .header-language-mobile{
-        display: flex;
-        margin: 0.35em 0.1em;
-        padding: 0.5em 1.2em;
-        outline: none;
-        align-items: center;
-    }
-    .header-language-mobile img{
-        width: 14px;
-        height: 9px;
-        margin-left: 10px;
-    }
-    .mobile-menu-header{
-        width: 100%;
-        background-color: #0093D0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100px;
-    }
-    .mobile-menu-social{
-        width: 40%;
-        display: flex;
-        margin-bottom: 40px;
-    }
-    .mobile-menu-social img{
-        width: 30px;
-        height: 30px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .mobile-menu-phone-wrapper{
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-top: .7px solid lightgray;
-        border-bottom: .7px solid lightgray;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .mobile-menu-phone-wrapper p{
-        color: black;
-        font-size: 20px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-    .mobile-menu-language-select{
-        width: 65px;
-        color: black;
-        font-weight: bold;
-        font-size: 18px;
-        margin-top: 15px;
-        margin-bottom: 5px;
-    }
+}
     /* BURGER MENU */
     .left_sidebar{
         position: fixed;
@@ -242,8 +175,10 @@ header option{
     }
     /* Demo Buttons Style */
     .codrops-demos {
+        width: 100%;
         padding-top: 1em;
         font-size: 20px;
+        font-family: Montserrat;
     }
     .codrops-demos a {
         display: inline-block;
@@ -251,25 +186,21 @@ header option{
         padding: 0.5em 1.2em;
         outline: none;
         text-decoration: none;
-        /*text-transform: uppercase;*/
         letter-spacing: 1px;
-        font-weight: 800;
         border-radius: 10px;
         font-size: 20px;
         border: 2px solid transparent;
     }
 
     .codrops-demos_sidebar a {
-        /*display: inline-block;*/
-        margin: 0.35em 0.1em;
-        padding: 0.5em 1.2em;
+        width: 100%;
+        padding-top: 20px;
+        padding-bottom: 20px;
         outline: none;
         text-decoration: none;
-        /*text-transform: uppercase;*/
         letter-spacing: 1px;
         font-weight: 800;
-        border-radius: 10px;
-        border: 2px solid transparent;
+        border-bottom: 2px solid black;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -279,6 +210,7 @@ header option{
     .codrops-demos_sidebar{
         font-family: 'Montserrat';
         /*position: absolute;*/
+        width: 100%;
         top: 20%;
         bottom: 20%;
         padding-top: 1em;
@@ -287,6 +219,7 @@ header option{
         flex-direction: column;
         align-items: center;
         color: black;
+        margin-top: 70px;
     }
     .menu_button{
         display: flex;
@@ -310,10 +243,13 @@ header option{
     .content_active {
         transform: translateX(-100%);
     }
-    .codrops-demos_sidebar a:hover,
-    .codrops-demos_sidebar a.current-demo {
-        color: black;
-        border-color: black;
+
+@media (max-width: 650px) {
+    .header-phone-number{
+        display: none;
+    }
+    .call-back-button-header{
+        display: none;
     }
 }
 @media (max-width: 525px) {
