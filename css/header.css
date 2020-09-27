@@ -131,29 +131,33 @@ header option{
     }
 }
 @media (max-width: 769px) {
-    header{
+    header {
         width: 95%;
         margin: 0 auto;
         display: flex;
         justify-content: flex-start;
     }
-    .call-back-button-header{
+
+    .call-back-button-header {
         width: 150px;
         margin-left: 70px;
         font-size: .85rem;
     }
+
     .header-phone-number {
         display: unset;
     }
+
     .header-menu {
         display: none;
     }
+
     .logo {
         width: 140px;
     }
-}
+
     /* BURGER MENU */
-    .left_sidebar{
+    .left_sidebar {
         position: fixed;
         display: flex;
         flex-direction: column;
@@ -162,7 +166,8 @@ header option{
         background-color: white;
         color: black;
         height: 100%;
-        left: 0;top: 0;
+        left: 0;
+        top: 0;
         z-index: 99;
         align-items: center;
         transition: 0.5s;
@@ -170,12 +175,15 @@ header option{
         /*overflow-x: hidden;*/
         /*overflow-y: auto;*/
     }
-    .left_sidebar a{
+
+    .left_sidebar a {
         color: black;
     }
-    .mobile-menu-header-logo{
+
+    .mobile-menu-header-logo {
         width: 200px;
     }
+
     /* Demo Buttons Style */
     .codrops-demos {
         width: 100%;
@@ -183,6 +191,7 @@ header option{
         font-size: 20px;
         font-family: Montserrat;
     }
+
     .codrops-demos a {
         display: inline-block;
         margin: 0.35em 0.1em;
@@ -210,7 +219,8 @@ header option{
         align-content: center;
         color: black;
     }
-    .codrops-demos_sidebar{
+
+    .codrops-demos_sidebar {
         font-family: 'Montserrat';
         /*position: absolute;*/
         width: 100%;
@@ -224,7 +234,8 @@ header option{
         color: black;
         margin-top: 70px;
     }
-    .menu_button{
+
+    .menu_button {
         display: flex;
         width: 50px;
         height: auto;
@@ -233,26 +244,32 @@ header option{
         top: 22px;
         z-index: 1000;
     }
-    .cancel_button{
+
+    .cancel_button {
         width: 30px;
         height: auto;
         position: absolute;
         left: 25px;
         top: 25px;
     }
+
     .menu_active {
         transform: translateX(0%);
     }
+
     .content_active {
         transform: translateX(-100%);
     }
-    .mobile-menu-language-select{
+
+    .mobile-menu-language-select {
         margin-top: 20px;
         margin-bottom: 20px;
     }
-    .mobile-menu-social{
+
+    .mobile-menu-social {
         margin-top: 30px;
     }
+}
 @media (max-width: 650px) {
     .header-phone-number{
         display: none;
