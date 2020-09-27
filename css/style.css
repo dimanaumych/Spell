@@ -52,7 +52,7 @@ header{
     height: 100px;
     display: flex;
     align-items: center;
-    margin-left: 120px;
+    padding-left: 10px;
     color: black;
     justify-content: space-between;
     font-size: .9rem;
@@ -80,6 +80,7 @@ header ul a:hover{
     background: linear-gradient(90deg, #E94E1B 50%, white 50%);
     font-weight: bold;
     cursor: pointer;
+    transition: 3s;
 }
 .header-menu {
     display: flex;
@@ -121,7 +122,7 @@ header option{
 
 .header-banner{
     display: flex;
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
     align-items: center;
@@ -165,19 +166,44 @@ header option{
     cursor: pointer;
 }
 
+marquee{
+    display: flex;
+    width:100%;
+    white-space:nowrap;
+    overflow-x:hidden;
+    margin-top: 100px;
+    font-family: Montserrat;
+}
+.run-text-filled{
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+.run-text-empty{
+    color: white;
+    font-size: 3rem;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px #000000;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    font-family: "Montserrat ExtraBold";
+}
+
 .lights{
-    width: 40%;
+    width: 20%;
     display: flex;
     height: 1140px;
     align-items: flex-start;
 }
 
 .service{
+    position: relative;
     width: 100%;
     padding-top: 130px;
     padding-bottom: 200px;
-    display: flex;
-    justify-content: center;
 }
 
 .service-container{
@@ -188,6 +214,8 @@ header option{
     z-index: 1;
     justify-content: center;
     align-items: flex-start;
+    margin: 0px auto;
+    margin-top: 130px;
 }
 
 .service_card{
@@ -293,9 +321,8 @@ header option{
 
 .steps{
     width: 100%;
-    display: flex;
-    justify-content: center;
     margin-bottom: 133px;
+    position: relative;
 }
 
 .steps_card{
@@ -314,6 +341,13 @@ header option{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0px auto;
+    margin-top: 144px;
+}
+
+.vector-left{
+    position: absolute;
+    top: 19%;
 }
 
 .number-inc{
@@ -365,18 +399,18 @@ header option{
     color: #242424;
 }
 
-.steps_card__button{
+.steps_card__button {
     display: flex;
     justify-content: center;
-    width: 346px;
+    max-width: 375px;
     align-items: center;
     font-family: Montserrat;
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
     color: #242424;
     background: linear-gradient(90deg, #E94E1B 50%, white 30%);
-    padding: 12px 0px;
+    padding: 13px 15px;
 }
 
 footer{
@@ -397,6 +431,7 @@ footer{
 .feedback_info__wrapper{
     margin-top: 100px;
     width: 60%;
+    padding-left: 20px;
 }
 
 .info_feedback{
@@ -502,8 +537,9 @@ footer{
 }
 
 .footer-info_wrapper{
-    width: 1200px;
+    max-width: 1200px;
     display: flex;
+    padding-left: 20px;
 }
 
 .info_footer{
@@ -596,6 +632,7 @@ footer{
     animation-name: lights-one;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
+    margin-left: -115px;
 }
 
 
@@ -605,6 +642,7 @@ footer{
     animation-duration: 4s;
     animation-name: lights-two;
     animation-timing-function: ease-in-out;
+    margin-left: -85px;
 }
 
 .lights-three{
@@ -613,6 +651,7 @@ footer{
     animation-duration: 5s;
     animation-name: lights-three;
     animation-timing-function: ease-in-out;
+    margin-left: -60px;
 }
 
 .lights-one:before{
@@ -733,20 +772,104 @@ footer{
     display:none;
 }
 
+.call-back-button-header:hover {
+    background: linear-gradient(90deg, #E94E1B 50%, #E94E1B 50%);
+}
+
+.call-back-button-header-banner:hover {
+    background: linear-gradient(90deg, #E94E1B 50%, #E94E1B 50%);
+}
+
+.steps_card__button:hover {
+    background: linear-gradient(90deg, #E94E1B 50%, #E94E1B 50%);
+}
+
+.input-wrapper .steps_card__button:hover {
+    background: linear-gradient(90deg, white 50%, white 50%);
+}
+
+.rectangle-background{
+    position: absolute;
+}
+
+.vector-right{
+    position: absolute;
+    right: 0px;
+    top: 44%;
+}
+
 input:-ms-input-placeholder {color: rgba(255, 255, 255, 0.69);}
 input::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.69);}
 input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
 
 @media (max-width: 1440px) {
+
     header {
-        width: 1000px;
+        max-width: 1100px;
         height: 100px;
     }
+
+    .vector-left{
+        display: none;
+    }
+
+    .rectangle-background {
+        max-width: 1024px;
+    }
+
+    .lights-three {
+        display: none;
+    }
+
+    .lights-two {
+        display: none;
+    }
+
+    .lights-one {
+        margin-left: -50px;
+    }
+
+    .lights {
+        width: 0%;
+    }
+    .header-phone-number {
+        margin-left: 0px;
+        margin-right: 40px;
+
+    }
 }
+
+
+@media (max-width: 1430px){
+
+    .lights {
+        width: 10%;
+    }
+
+    .lights-one {
+        margin-left: -115px;
+    }
+
+    .lights_feedback img:nth-child(1) {
+        width: 20%;
+    }
+    .lights_feedback img:nth-child(2) {
+        width: 20%;
+    }
+    .lights_feedback img:nth-child(3) {
+        width: 20%;
+    }
+}
+
 @media (max-width: 1024px) {
     header {
-        width: 760px;
+        max-width: 760px;
         height: 100px;
+    }
+
+
+    .header-menu ul {
+        display: none;
     }
 
     .logo {
@@ -764,8 +887,71 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
         letter-spacing: 1px;
         cursor: pointer;
     }
+
+    .rectangle-background {
+        max-width: 768px;
+    }
+
+    .lights-one {
+        margin-left: -135px;
+    }
+
+    .lights_feedback img:nth-child(1) {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+    }
+
+    .lights_feedback img:nth-child(2) {
+        position: absolute;
+        top: 0px;
+        left: 35%;
+    }
+
+    .lights_feedback img:nth-child(3) {
+        position: absolute;
+        top: 0px;
+        left: 65%;
+    }
+
+    .footer-info_wrapper {
+        padding-left: 20px;
+    }
+
+    .feedback_info__wrapper {
+        padding-left: 20px;
+    }
+
+    .steps_card:nth-child(2n) {
+        margin-left: auto;
+    }
+
+    .steps_wrapper {
+        flex-direction: column;
+    }
+
+    .steps_card {
+        margin: 0px auto;
+        margin-bottom: 80px;
+    }
+
+    .steps_card__button {
+        margin: 0px auto;
+    }
+
+    .header-banner-left-side {
+        padding-left: 20px;
+    }
+
+
 }
+
 @media (max-width: 769px) {
+
+    .footer-pagination__social {
+        padding-right: 20px;
+    }
+
     .header-menu{
         display: none;
     }
@@ -781,24 +967,24 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
     .banner-info-title{
         font-size: 4rem;
     }
-    header{
-        width: 420px;
-    }
-
     .header-menu{
         display: none;
     }
+
+
+
     .logo{
         margin-left: 10%;
     }
+
     header{
-        /*position: absolute;*/
         width: 100%;
         display: flex;
-        justify-content: normal;
+        justify-content: space-around;
         z-index: 99;
-
+        margin-left: 0px;
     }
+
     .header-contact{
         margin: 0px auto;
 
@@ -937,7 +1123,7 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
         width: 50px;
         height: auto;
         position: absolute;
-        left: -80px;
+        left: -60px;
         top: 22px;
         z-index: 1000;
     }
@@ -959,8 +1145,145 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
         color: black;
         border-color: black;
     }
+
+    .rectangle-background {
+        width: 425px;
+        height: 100%;
+    }
+    .header-banner-second-title {
+        width: 100%;
+    }
+
+    .header-banner-left-side {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 30px;
+    }
+
+    .lights_feedback img:nth-child(1) {
+        position: absolute;
+        top: 0px;
+        left: 0%;
+        height: 60%;
+    }
+
+    .lights_feedback img:nth-child(2) {
+        position: absolute;
+        top: 0px;
+        left: 35%;
+        height: 35%;
+    }
+
+    .lights_feedback img:nth-child(3) {
+        position: absolute;
+        top: 0px;
+        left: 58%;
+        height: 60%;
+    }
+
+    .lights-one {
+        display: none;
+    }
+
+    .vector-right {
+        display: none;
+    }
+
+    .footer_info__wrapper {
+        width: 80%;
+    }
+
+    .footer-info_wrapper {
+        flex-direction: column;
+    }
+
+    .footer-pagination ul {
+        margin-top: 0px;
+    }
+    .footer-pagination__li {
+        margin-left: 0px;
+    }
+
 }
 
+@media (max-width: 1000px) {
+
+    .lights-one {
+        display: none;
+    }
+
+    header {
+        margin-left: 0px;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    .lights_feedback img:nth-child(2) {
+        position: absolute;
+        top: 0px;
+        left: 29%;
+    }
+
+    .lights_feedback img:nth-child(3) {
+        position: absolute;
+        top: 0px;
+        left: 58%;
+    }
+
+}
+
+
+
+@media (max-width: 665px) {
+    .lights_feedback{
+        display: none;
+    }
+
+    .feedback_info__wrapper {
+        width: 88%;
+        margin: 0px auto;
+        padding-top: 60px;
+        margin-top: 100px;
+    }
+
+    .service_card::before {
+        right: 0px;
+        bottom: -52px;
+        border: 52px solid transparent;
+        border-left: 225px solid #E94E1B;
+        border-right: 0px solid;
+
+    }
+
+    .header-banner-second-title {
+        font-size: 2rem;
+    }
+
+    .service_card {
+        margin-right: 0px;
+    }
+
+    .steps_card {
+        padding: 20px;
+        width: 425px;
+    }
+
+    .service_text {
+        width: 375px;
+    }
+
+    .header-banner-first-title {
+        font-size: 2rem;
+    }
+
+    .logo {
+        width: 120px;
+    }
+    .header-phone-number{
+        display: none;
+    }
+}
 
 @media (max-width: 525px) {
     .back-call{
@@ -969,8 +1292,36 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
     .logo{
         margin-left: 10%;
     }
+
 }
+
 @media (max-width: 425px) {
+
+    .call-back-button-header {
+        width: 155px;
+        color: white;
+        line-height: 40px;
+        background: #E94E1A;
+        font-size: 15px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .header-phone-number {
+        margin-left: 80px;
+        display: none;
+    }
+
+    .input-wrapper input:nth-child(3n) {
+        width: 80%;
+    }
+
+    .feedback_info__wrapper {
+        width: 100%;
+    }
+
     header {
         width: 100%;
     }
@@ -978,9 +1329,141 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
         width: 40px;
         top: 26px
     }
+
+    .rectangle-background {
+        display: none;
+    }
+
+    .header-banner-first-title {
+        font-size: 2rem;
+    }
+
+    .header-banner-second-title {
+        font-size: 2rem;
+    }
+    .service_card {
+        padding: 16px;
+        margin-right: 0px;
+    }
+    .service-container {
+        padding: 20px;
+    }
+    .service_describe-card {
+        font-size: 25px;
+    }
+
+    .service_text {
+        width: 330px;
+        font-size: 15px;
+    }
+
+    .steps_card__title {
+        font-size: 20px;
+    }
+
+    .steps_card {
+        width: 375px;
+    }
+
+    .steps_card__text {
+        font-size: 11px;
+    }
+    .inc-point{
+        width: 95px;
+    }
+
+    .lights_feedback {
+        display: none;
+    }
+
+    .footer-info_wrapper {
+        max-width: 378px;
+    }
+
+    .footer-info_wrapper {
+        flex-direction: column;
+    }
+
+    .footer-pagination__li {
+        margin-left: 0px;
+    }
+
+    .footer-pagination ul {
+        margin-top: 0px;
+    }
+
+    .service_card::before {
+        right: 0px;
+        bottom: -52px;
+        border: 52px solid transparent;
+        border-left: 225px solid #E94E1B;
+        border-right: 0px solid;
+
+    }
+
+    .footer-pagination__social {
+        margin-left: 150px;
+    }
+
+    .inc-icon {
+        position: absolute;
+        left: 30px;
+        top: 33px;
+        width: 34px;
+    }
 }
+
 @media (max-width: 360px) {
+
+    .service_card {
+        width: 300px;
+    }
+
+    .service_text {
+        width: 280px;
+        font-size: 15px;
+    }
+
+    .feedback_info__wrapper {
+        width: 90%;
+    }
+
+    .text_feedback {
+        width: 300px;
+    }
+
     .mobile-menu-header-logo{
         width: 150px;
     }
+
+    .inc-point {
+        width: 80px;
+    }
+    .inc-icon {
+        left: 26px;
+        width: 34px;
+        top: 33px;
+    }
+
+    .number-inc {
+        right: 0px;
+        top: 0px;
+        width: 30px;
+        height: 32px;
+        font-size: 18px;
+    }
+
+    .steps_card {
+        width: 285px;
+    }
+
+    .footer-info_wrapper {
+        max-width: 300px;
+    }
+
+    .footer-pagination__social {
+        margin-left: 60px;
+    }
+
+
 }
