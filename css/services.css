@@ -1,3 +1,35 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.woff') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Montserrat-Bold'), local('Montserrat-Bold'), url('../fonts/Montserrat-Bold.woff') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff')
+}
+@font-face {
+    font-family: 'Montserrat Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat-Medium'), local('Montserrat-Medium.woff'), url('../fonts/Montserrat-Medium.woff') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff')
+}
+@font-face {
+    font-family: 'Montserrat SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat-SemiBold'), local('Montserrat-SemiBold.woff'), url('../fonts/Montserrat-SemiBold.woff') format('woff2'), url('../fonts/Montserrat-SemiBold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Montserrat-ExtraBold'), local('Montserrat-ExtraBold.woff'), url('../fonts/Montserrat-ExtraBold.woff') format('woff2'), url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+}
 .header-banner{
     display: flex;
     width: 1200px;
@@ -25,6 +57,7 @@
     -webkit-text-stroke: 1px #000000;
     letter-spacing: 2px;
     margin-bottom: 20px;
+    font-family: "Montserrat SemiBold";
 }
 .header-banner-text{
 margin-bottom: 50px;
@@ -50,23 +83,14 @@ marquee{
     white-space:nowrap;
     overflow-x:hidden;
     margin-top: 100px;
+    font-family: Montserrat;
 }
-
-/*.marquee{*/
-/*    color:#212121;*/
-/*    font-size:25px;*/
-/*    display:flex;*/
-/*    padding-left:100%;*/
-/*    -webkit-animation: marquee 10s infinite linear;*/
-/*    animation: marquee 10s infinite linear;*/
-/*    margin-top: 100px;*/
-/*}*/
-
 .run-text-filled{
     font-size: 3rem;
     text-transform: uppercase;
     font-weight: bold;
     letter-spacing: 2px;
+
 }
 .run-text-empty{
     color: white;
@@ -76,13 +100,310 @@ marquee{
     letter-spacing: 2px;
     margin-bottom: 20px;
     margin-left: 10px;
+    font-family: "Montserrat ExtraBold";
 }
-/*@-webkit-keyframes marquee {*/
-/*    0%{-webkit-transform: translate(0, 0);}*/
-/*    100%{-webkit-transform: translate(-100%, 0);}*/
-/*}*/
+.advantages-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    font-family: Montserrat;
+    margin-top: 200px;
+}
+.left-side-advantages{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.orange-bg-wrapper{
+    position: relative;
+    width: 33%;
+}
+.advantages-bg-left{
+    width: 280px;
+    height: 280px;
+}
+.black-underline{
+    position: absolute;
+    width: 240px;
+    height: 10px;
+    background-color: black;
+    top: 223px;
+}
+.advantages-tassel-left{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    top: 80px;
+    left: 60px;
+}
+.advantages-text-empty{
+    color: white;
+    font-size: 1.2rem;
+    -webkit-text-stroke: 1px #E94E1B;
+    letter-spacing: 2px;
+    font-family: "Montserrat ExtraBold";
+}
+.advantages-text-filled{
+    color: #E94E1B;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+.advantages-text{
+    margin-top: 25px;
+}
+.advantages-title-left{
+    position: absolute;
+    top: 120px;
+    left: 170px;
+    width: 100px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.advantages-arrow-wrapper{
+    width: 33%;
+    position: relative;
+}
+.advantages-arrow-white-left{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    top: -18px;
+    z-index: 9;
+}
+.advantages-arrow-orange-left{
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    left: 45px;
+}
+.orange-text-wrapper{
+    width: 33%;
+}
 
-/*@keyframes marquee{*/
-/*    0%{transform: translate(0, 0);}*/
-/*    100%{transform: translate(-100%, 0)}*/
-/*}*/
+.right-side-advantages{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 80%;
+    margin-left: 20%;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.right-side-advantages .advantages-bg-left{
+    width: 220px;
+    height: 200px;
+}
+
+.right-side-advantages .advantages-arrow-white-left{
+    transform: rotate(180deg);
+    top: 18px;
+    left: 90px;
+
+}
+.right-side-advantages .advantages-arrow-orange-left{
+    transform: rotate(180deg);
+    top: 0px;
+}
+.right-side-advantages .black-underline{
+    top: 198px;
+}
+.right-side-advantages .advantages-tassel-left{
+    left: 110px;
+    top: 70px;
+
+}
+.right-side-advantages .advantages-title-left{
+    left: -50px;
+    top: 100px;
+}
+
+.additional-info-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    display:  flex;
+    flex-direction: column;
+    margin-top: 150px;
+}
+.additional-info-section-wrapper{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-top: 1px solid #E94E1B;
+}
+.additional-info-section-wrapper:last-child{
+    border-bottom: 1px solid #E94E1B;
+}
+.additional-info-title{
+    font-family: Montserrat;
+    font-weight: bold;
+}
+.additional-info-button{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.additional-info-cancel{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    display: none;
+    margin-right: 12px;
+    margin-top: 10px;
+}
+.additional-info-text{
+    display: none;
+    margin-top: 20px;
+}
+
+.about-service-wrapper{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 200px;
+    justify-content: space-between;
+    margin-bottom: 150px;
+}
+.about-service-text-empty{
+    color: white;
+    font-size: 1.5rem;
+    -webkit-text-stroke: 1px #E94E1B;
+    letter-spacing: 2px;
+    font-family: "Montserrat ExtraBold";
+    text-transform: uppercase;
+}
+.about-service-text-filled{
+    color: #E94E1B;
+    font-family: "Montserrat ExtraBold";
+    font-size: 2.5rem;
+}
+.about-service{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-family: Montserrat;
+    line-height: 25px;
+}
+.about-service-left{
+    width: 30%;
+    font-weight: bold;
+}
+.about-service-right{
+    width: 55%;
+}
+.first-orange-line{
+    width: 105px;
+    height: 3px;
+    background-color: #E94E1B;
+    margin-top: 50px;
+}
+.second-orange-line{
+    width: 105px;
+    height: 3px;
+    background-color: #E94E1B;
+    margin-top: 5px;
+}
+.third-orange-line{
+    width: 75px;
+    height: 3px;
+    background-color: #E94E1B;
+    margin-top: 5px;
+}
+
+
+.steps{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 133px;
+    margin-top: 200px;
+}
+
+.steps_card{
+    display: flex;
+    width: 515px;
+    margin-bottom: 94px;
+}
+
+
+.steps_card:nth-child(2n){
+    margin-left: 160px;
+}
+
+.steps_wrapper{
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.number-inc{
+    position: absolute;
+    right: 0px;
+    top: -10px;
+    width: 46px;
+    height: 46px;
+    background: black;
+    border-radius: 30px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #FFFFFF
+}
+
+.steps_card__inc{
+    position: relative;
+    margin-right: 26px;
+}
+
+.inc-icon{
+    position: absolute;
+    left: 30px;
+    top: 33px;
+}
+
+.steps_card__title{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    color: #242424;
+    margin-bottom: 23px;
+}
+
+
+.steps_card__text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    color: #242424;
+}
+
+.steps_card__button{
+    display: flex;
+    justify-content: center;
+    width: 346px;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #242424;
+    background: linear-gradient(90deg, #E94E1B 50%, white 30%);
+    padding: 12px 0px;
+}
