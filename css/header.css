@@ -92,6 +92,9 @@ header option{
 .phone-select{
     padding-right: 10px;
 }
+.mobile-menu-phone-wrapper{
+    margin-top: 30px;
+}
 
 @media (max-width: 1440px) {
     header {
@@ -199,7 +202,7 @@ header option{
         outline: none;
         text-decoration: none;
         letter-spacing: 1px;
-        font-weight: 800;
+        font-weight: 500;
         border-bottom: 2px solid black;
         display: flex;
         justify-content: center;
@@ -243,7 +246,13 @@ header option{
     .content_active {
         transform: translateX(-100%);
     }
-
+    .mobile-menu-language-select{
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .mobile-menu-social{
+        margin-top: 30px;
+    }
 @media (max-width: 650px) {
     .header-phone-number{
         display: none;

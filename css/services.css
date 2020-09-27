@@ -170,7 +170,7 @@ marquee{
     width: 100px;
     height: 70px;
     top: -18px;
-    z-index: 9;
+    z-index: 2;
 }
 .advantages-arrow-orange-left{
     position: absolute;
@@ -261,6 +261,7 @@ marquee{
 .additional-info-text{
     display: none;
     margin-top: 20px;
+    font-family: Montserrat;
 }
 
 .about-service-wrapper{
@@ -409,6 +410,15 @@ marquee{
     background: linear-gradient(90deg, #E94E1B 50%, white 30%);
     padding: 12px 0px;
 }
+.mobile-menu-social{
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.mobile-menu-social img{
+    width: 50px;
+    height: 50px;
+}
 @media (max-width: 1440px) {
     .header-banner{
         width: 1000px;
@@ -548,7 +558,7 @@ marquee{
 }
 @media (max-width: 500px) {
     .header-banner{
-        width: 370px;
+        width: 95%;
         flex-wrap: wrap;
         flex-direction: column-reverse;
     }
@@ -556,7 +566,8 @@ marquee{
         font-size: 2.4rem;
     }
     .advantages-wrapper {
-        width: 370px;
+        width: 95%;
+        margin: 0 auto;
         margin-top: 100px;
     }
     .right-side-advantages .advantages-arrow-white-left{
@@ -578,9 +589,29 @@ marquee{
         width: 80%;
     }
     .additional-info-wrapper {
-        width: 370px;
+        width: 95%;
+        margin: 0 auto;
+        margin-top: 100px;
     }
     .about-service-wrapper {
-        width: 370px;
+        width: 95%;
+        margin: 0 auto;
+    }
+    .about-service-text-empty{
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 350px) {
+    .advantages-arrow-orange-left{
+        display: none;
+    }
+    .advantages-arrow-white-left{
+        display: none;
+    }
+    .header-banner-first-title{
+        font-size: 1.8rem;
+    }
+    .advantages-title-left{
+        font-size: 1rem;
     }
 }
