@@ -216,6 +216,34 @@ footer{
     top: 19%;
 }
 
+.steps_card__button {
+    display: flex;
+    justify-content: center;
+    max-width: 375px;
+    align-items: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #242424;
+    background: linear-gradient(90deg, #E94E1B 50%, white 30%);
+    padding: 13px 15px;
+}
+
+.input-wrapper .steps_card__button{
+    background: linear-gradient(90deg, white 50%, #E94E1B 30%);
+    margin-bottom: 96px;
+    cursor: pointer;
+}
+
+.steps_card__button:hover {
+    background: linear-gradient(90deg, #E94E1B 50%, #E94E1B 50%);
+}
+
+.input-wrapper .steps_card__button:hover {
+    background: linear-gradient(90deg, white 50%, white 50%);
+}
+
 input:-ms-input-placeholder {color: rgba(255, 255, 255, 0.69);}
 input::-webkit-input-placeholder {color: rgba(255, 255, 255, 0.69);}
 input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
@@ -236,6 +264,9 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
 
 @media (max-width: 1024px) {
 
+    .steps_card__button {
+        margin: 0px auto;
+    }
 
     .lights_feedback img:nth-child(1) {
         position: absolute;
@@ -386,7 +417,7 @@ input:-moz-placeholder {color:rgba(255, 255, 255, 0.69);}/* Firefox 19+ */
     }
 
     .text_feedback {
-        width: 300px;
+        width: 280px;
     }
 
     .footer-info_wrapper {

@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('../fonts/Montserrat-Regular.woff') format('woff2'), url('../fonts/Montserrat-Regular.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Montserrat-Bold'), local('Montserrat-Bold'), url('../fonts/Montserrat-Bold.woff') format('woff2'), url('../fonts/Montserrat-Bold.woff') format('woff')
+}
+@font-face {
+    font-family: 'Montserrat Medium';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Montserrat-Medium'), local('Montserrat-Medium.woff'), url('../fonts/Montserrat-Medium.woff') format('woff2'), url('../fonts/Montserrat-Medium.woff') format('woff')
+}
+@font-face {
+    font-family: 'Montserrat SemiBold';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Montserrat-SemiBold'), local('Montserrat-SemiBold.woff'), url('../fonts/Montserrat-SemiBold.woff') format('woff2'), url('../fonts/Montserrat-SemiBold.woff') format('woff')
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    font-style: normal;
+    font-weight: 800;
+    src: local('Montserrat-ExtraBold'), local('Montserrat-ExtraBold.woff'), url('../fonts/Montserrat-ExtraBold.woff') format('woff2'), url('../fonts/Montserrat-ExtraBold.woff') format('woff')
+}
+
+.contact{
+    width: 100%;
+    margin-top: 201px;
+}
+
+.contact-wrapper{
+    max-width: 1200px;
+    margin: 0px auto;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+.contact-img {
+    position: absolute;
+    top: -221px;
+    left: -150px;
+    z-index: -1;
+}
+
+.text_footer:nth-child(2n+1) {
+    padding-bottom: 70px;
+}
+
+.social-clubs{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+
+@media (max-width: 1024px) {
+
+   iframe{
+       width: 550px;
+   }
+
+    .contact-img {
+        position: absolute;
+        top: -140px;
+        left: -169px;
+        z-index: -1;
+        width: 116%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .contact {
+        width: 100%;
+        margin-top: 100px;
+    }
+
+    .social-clubs {
+        justify-content: flex-start;
+    }
+
+    .social-clubs img{
+        margin-right: 15px;
+    }
+
+    .footer_info__wrapper {
+        width: 40%;
+    }
+
+    iframe {
+        width: 335px;
+    }
+
+}
+
+@media (max-width: 630px) {
+
+    .contact-wrapper{
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .footer_info__wrapper {
+        margin: 0px auto;
+        width: 96%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .social-clubs {
+        justify-content: center;
+    }
+
+    .contact-img {
+        position: absolute;
+        top: 1%;
+        left: 8%;
+        z-index: -1;
+        width: 85%;
+    }
+
+    iframe {
+        width: 100%;
+    }
+}
+
